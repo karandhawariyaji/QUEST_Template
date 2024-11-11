@@ -8,25 +8,25 @@ Level_2_BU_Folders = {
 # *************************************** Level-2 Folders Configuration ************************************** #
 
 # .......... Business Units (BU) Folders Configuration ......... #
-  "gcp-boot-pocrk" = {
+  "gcp-boot-poc" = {
     delete              = false,
     parent              = "organizations/965415543182",
     tags                = {},
     deletion_protection = false
   },
-   "gcp-shrd-pocrk" = {
+   "gcp-shrd-poc" = {
     delete              = false,
     parent              = "organizations/965415543182",
     tags                = {},
     deletion_protection = false
   },
-  "gcp-us-pocrk" = {
+  "gcp-us-poc" = {
     delete              = false,
     parent              = "organizations/965415543182",
     tags                = {},
     deletion_protection = false
   },
-  "gcp-eu-pocrk" = {
+  "gcp-eu-poc" = {
     delete              = false,
     parent              = "organizations/965415543182",
     tags                = {},
@@ -42,7 +42,7 @@ Level_2_BU_Folders = {
 #............... Bootstrap Folders Configuration ...............#
 
 Level_3_boot_BU_Folders = {  
-  "gcp-boot-us-pocrk" = {
+  "gcp-boot-us-poc" = {
     delete = false,
     tags  = {},
     deletion_protection = false
@@ -67,13 +67,13 @@ Level_3_boot_BU_Folders = {
 #********************************** North America **************************************# 
 
 Level_3_us_BU_Folders = {  
-  "gcp-shrd-infra-us-pocrk" = {
+  "gcp-shrd-infra-us-poc" = {
     delete = false,
     tags  = {},
     deletion_protection = false
     
   },
-  "gcp-dev-us-pocrk" = {
+  "gcp-dev-us-poc" = {
     delete = false,
     tags  = {},
     deletion_protection = false
