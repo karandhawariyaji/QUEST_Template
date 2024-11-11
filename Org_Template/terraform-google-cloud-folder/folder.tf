@@ -21,7 +21,7 @@ module "Level_3_boot_BU_Folders" {
   }
   source        = "git::https://github.com/Karandhawariyaji/QUEST_Module.git?ref=v0.0.3"  
   folder_name  = each.key
-  parent       = module.Level_2_BU_Folders["gcp-boot-pocrk"].folder_details.id
+  parent       = module.Level_2_BU_Folders["gcp-boot-poc"].folder_details.id
   tags         = each.value.tags
   deletion_protection = each.value.deletion_protection
   depends_on   = [ module.Level_2_BU_Folders ]
@@ -44,7 +44,7 @@ module "Level_3_us_BU_Folders" {
   }
   source        ="git::https://github.com/Karandhawariyaji/QUEST_Module.git?ref=v0.0.3"  
   folder_name  = each.key
-  parent       = module.Level_2_BU_Folders["gcp-us-pocrk"].folder_details.id
+  parent       = module.Level_2_BU_Folders["gcp-us-poc"].folder_details.id
   tags         = each.value.tags
   deletion_protection = each.value.deletion_protection
   depends_on   = [ module.Level_2_BU_Folders ]
@@ -72,7 +72,7 @@ module "Level_4_us_dev_BU_Folders" {
   }
   source        = "git::https://github.com/Karandhawariyaji/QUEST_Module.git?ref=v0.0.3"
   folder_name  = each.key
-  parent       = module.Level_3_us_BU_Folders["gcp-dev-us-pocrk"].folder_details.id
+  parent       = module.Level_3_us_BU_Folders["gcp-dev-us-poc"].folder_details.id
   tags         = each.value.tags
   deletion_protection = each.value.deletion_protection
   depends_on   = [ module.Level_3_us_BU_Folders ]
