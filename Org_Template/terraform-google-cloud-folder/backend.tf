@@ -2,7 +2,7 @@
 
 terraform {
     backend "gcs" {
-    bucket  = "slz-poc"
+    bucket  = "slz-poc" 
     #prefix  = "organization"
   }
 }
