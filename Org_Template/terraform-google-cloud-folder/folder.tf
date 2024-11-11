@@ -19,7 +19,7 @@ module "Level_3_boot_BU_Folders" {
   for_each     = {
     for k, v in try(var.Level_3_boot_BU_Folders,{}): k => v if v.delete != true
   }
-  source       = ""github.com/Karandhawariyaji/QUEST_Module//Org_Module//terraform-google-cloud-folder" 
+  source       = "github.com/Karandhawariyaji/QUEST_Module//Org_Module//terraform-google-cloud-folder" 
   folder_name  = each.key
   parent       = module.Level_2_BU_Folders["gcp-boot-pocrk"].folder_details.id
   tags         = each.value.tags
