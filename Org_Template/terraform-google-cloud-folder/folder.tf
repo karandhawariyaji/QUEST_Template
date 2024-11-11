@@ -2,7 +2,7 @@
 
 module "Level_2_BU_Folders" {
   for_each     = {
-    for k, v in try(var.Level_2_BU_Folders,{}): k => v if v.delete != true        
+    for k, v in try(var.Level_2_BU_Folders,{}): k => v if v.delete != true         
   }     
   source              = "github.com/Karandhawariyaji/QUEST_Module//Org_Module//terraform-google-cloud-folder"      
   folder_name         = each.key
