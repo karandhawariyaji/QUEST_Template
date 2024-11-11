@@ -30,7 +30,7 @@ jobs:
     - name: Terraform Init
       run: |
         cd Org_Template/terraform-google-cloud-folder
-        terraform init
+        terraform init --reconfigure
 
   validate: 
      runs-on: ubuntu-latest
