@@ -30,6 +30,7 @@ variable "Level_3_boot_BU_Folders" {
 #     sensitive   = false
 # }
 variable "Level_3_us_BU_Folders" {
+    type       = any
     sensitive   = false
 }
 # variable "Level_3_eu_BU_Folders" {
