@@ -6,6 +6,10 @@ variable "project_id" {
 variable "access_token" {
     sensitive   = true
 }
+variable "git_token" {
+    sensitive   = true
+description = "GitHub Personal Access Token"
+}
 
 # *************************************** Level-2 Folders Configuration ************************************** #
 variable "Level_2_BU_Folders" {
