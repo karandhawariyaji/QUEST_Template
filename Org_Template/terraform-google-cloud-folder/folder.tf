@@ -5,7 +5,8 @@ module "Level_2_BU_Folders" {
     for k, v in try(var.Level_2_BU_Folders,{}): k => v if v.delete != true         
   }     
   #source        = "git::https://github.com/Karandhawariyaji/QUEST_Module.git?ref=v0.0.3"
-  source        =  "git::https://${secrets.token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder" 
+  #source        =  "git::https://${secrets.token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
+  source        =  "git::https://${var.git_token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"  
   #source        =  "git::https://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@github.com/KarandhawariyaJI/QUEST_Module.git//Org_Module//terraform-google-cloud-folder?ref=v0.0.3"       
   folder_name         = each.key
   tags                = each.value.tags
@@ -21,7 +22,8 @@ module "Level_3_boot_BU_Folders" {
   for_each     = {
     for k, v in try(var.Level_3_boot_BU_Folders,{}): k => v if v.delete != true
   }
-  source        =  "git::https://${secrets.token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
+  source        =  "git::https://${var.git_token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
+  #source        =  "git::https://${secrets.token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
   #source        =  "git::https://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@github.com/KarandhawariyaJI/QUEST_Module.git//Org_Module//terraform-google-cloud-folder?ref=v0.0.3" 
   folder_name  = each.key
   parent       = module.Level_2_BU_Folders["gcp-boot-poc"].folder_details.id
@@ -45,8 +47,9 @@ module "Level_3_us_BU_Folders" {
   for_each     = {
     for k, v in try(var.Level_3_us_BU_Folders,{}): k => v if v.delete != true
   }
+  source        =  "git::https://${var.git_token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
   #source       =  "git::https://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@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder" 
-  source        =  "git::https://${secrets.token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
+  #source        =  "git::https://${secrets.token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
   #source        =  "git::https://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@github.com/KarandhawariyaJI/QUEST_Module.git//Org_Module//terraform-google-cloud-folder?ref=v0.0.3"    
   folder_name  = each.key
   parent       = module.Level_2_BU_Folders["gcp-us-poc"].folder_details.id
@@ -75,8 +78,9 @@ module "Level_4_us_dev_BU_Folders" {
   for_each     = {
     for k, v in try(var.Level_4_us_dev_BU_Folders,{}): k => v if v.delete != true
   }
+  source        =  "git::https://${var.git_token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
   #source        =  "git::https://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@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder" 
-  source        =  "git::https://${secrets.token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
+  #source        =  "git::https://${secrets.token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
   #source        =  "git::https://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@github.com/KarandhawariyaJI/QUEST_Module.git//Org_Module//terraform-google-cloud-folder?ref=v0.0.3"  
   folder_name  = each.key
   parent       = module.Level_3_us_BU_Folders["gcp-dev-us-poc"].folder_details.id
