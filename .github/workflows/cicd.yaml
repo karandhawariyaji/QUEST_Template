@@ -100,4 +100,5 @@ jobs:
     - name: Terraform Apply
       run: |
         cd Org_Template/terraform-google-cloud-folder
+        terraform init --upgrade
         terraform apply -auto-approve -input=false
