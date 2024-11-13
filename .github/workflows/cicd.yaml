@@ -80,7 +80,7 @@ jobs:
         run: |
           cd Org_Template/terraform-google-cloud-folder
           terraform init -reconfigure
-          terraform plan --var-file=folder.tfvars
-          terraform apply -auto-approve -input=false
-          terraform destroy -auto-approve
+          terraform plan --var-file=folder.tfvars -out=terraform.tfplan
+          terraform apply -auto-approve -input=false terraform.tfplan
+          terraform destroy -auto-approve 
 
