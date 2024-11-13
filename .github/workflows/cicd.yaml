@@ -30,7 +30,8 @@ jobs:
     - name: Terraform Init
       run: |
         cd Org_Template/terraform-google-cloud-folder
-        terraform init --reconfigure
+        #terraform init --reconfigure
+        terraform init  -var="git_token=${{ secrets.token }}"
 
   validate: 
      runs-on: ubuntu-latest
