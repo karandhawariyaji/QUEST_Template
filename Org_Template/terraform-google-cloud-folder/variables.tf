@@ -4,10 +4,10 @@ variable "project_id" {
     type        =  string
     #default     = "reference-host-prj"
 }
-variable "access_token" {
+/*variable "access_token" {
     type       = number
     sensitive   = true
-}
+}*/
 /*variable "git_token" {
     sensitive   = true
 description = "GitHub Personal Access Token"
