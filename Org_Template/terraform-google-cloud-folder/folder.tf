@@ -1,6 +1,6 @@
 # *************************************** Level-2 Folders Configuration ************************************** #       
  
-module "Level_2_BU_Folders" {
+module "Level_2_BU_Folders" { 
   for_each     = {  
     for k, v in try(var.Level_2_BU_Folders,{}): k => v if v.delete != true             
   }     
