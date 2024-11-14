@@ -3,7 +3,7 @@ org_policy                          = {
 
   "ainotebooks.restrictPublicIp"    = {
     delete                          = false
-    org_id                          = "179572310621"
+    org_id                          = "965415543182"
     version                         = 0
     boolean_policy                  = [
         {
@@ -37,7 +37,7 @@ org_policy                          = {
 
   "compute.vmExternalIpAccess"      = {
     delete                          = false
-    org_id                          = "179572310621"
+    org_id                          = "965415543182"
     version                         = 0
     boolean_policy                  = [
         /* {
@@ -71,7 +71,7 @@ org_policy                          = {
 
   "sql.restrictPublicIp"            = {
     delete                          = false
-    org_id                          = "179572310621"
+    org_id                          = "965415543182"
     version                         = 0
     boolean_policy                  = [
         {
@@ -105,7 +105,7 @@ org_policy                          = {
 
   "storage.publicAccessPrevention"  = {
     delete                          = false
-    org_id                          = "179572310621"
+    org_id                          = "965415543182"
     version                         = 0
     boolean_policy                  = [
         {
@@ -139,7 +139,7 @@ org_policy                          = {
 
   "compute.skipDefaultNetworkCreation"  = {
     delete                          = false
-    org_id                          = "179572310621"
+    org_id                          = "965415543182"
     version                         = 0
     boolean_policy                  = [
         {
