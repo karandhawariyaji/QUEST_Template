@@ -83,7 +83,7 @@ module "Level_4_us_dev_BU_Folders" {
   #source        =  "git::https://${secrets.token}@github.com/KarandhawariyaJI/QUEST_Module//Org_Module//terraform-google-cloud-folder"
   source        =  "git::https://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@github.com/KarandhawariyaJI/QUEST_Module.git//Org_Module//terraform-google-cloud-folder?ref=v1.0.0"  
   folder_name  = each.key
-  parent       = module.Level_3_us_BU_Folders["gcp-dev-us-quest].folder_details.id
+  parent       = module.Level_3_us_BU_Folders["gcp-dev-us-quest"].folder_details.id
   tags         = each.value.tags
   deletion_protection = each.value.deletion_protection
   depends_on   = [ module.Level_3_us_BU_Folders ]
