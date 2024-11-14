@@ -1,6 +1,6 @@
 variable "project_id" {
    type = any 
-#default     = "kd-project-437712"
+   default     = "seed-440521"
 }
 
 variable "org_policy" {
