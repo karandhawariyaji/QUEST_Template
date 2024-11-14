@@ -10,25 +10,25 @@ Level_2_BU_Folders = {
 # *************************************** Level-2 Folders Configuration ************************************** #
 
 # .......... Business Units (BU) Folders Configuration ......... #
-  "gcp-boot-poc" = {
+  "gcp-boot-quest" = {
     delete              = false,
     parent              = "organizations/965415543182",
     tags                = {},
     deletion_protection = false
   },
-   "gcp-shrd-poc" = {
+   "gcp-shrd-quest" = {
     delete              = false,
     parent              = "organizations/965415543182",
     tags                = {},
     deletion_protection = false
   },
-  "gcp-us-poc" = {
+  "gcp-us-quest" = {
     delete              = false,
     parent              = "organizations/965415543182",
     tags                = {},
     deletion_protection = false
   },
-  "gcp-eu-poc" = {
+  "gcp-eu-quest" = {
     delete              = false,
     parent              = "organizations/965415543182",
     tags                = {},
@@ -44,7 +44,7 @@ Level_2_BU_Folders = {
 #............... Bootstrap Folders Configuration ...............#
 
 Level_3_boot_BU_Folders = {  
-  "gcp-boot-us-poc" = {
+  "gcp-boot-us-quest" = {
     delete = false,
     tags  = {},
     deletion_protection = false
