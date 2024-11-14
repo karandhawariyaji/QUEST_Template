@@ -84,6 +84,32 @@ jobs:
         run: |
           cd Org_Template/terraform-google-cloud-folder
           terraform init -reconfigure
-          terraform plan --var-file=folder.tfvars -out=terraform.tfplan
-          terraform apply -auto-approve -input=false terraform.tfplan
-          terraform destroy -auto-approve 
+          terraform plan --var-file=folder.tfvars
+          #terraform plan --var-file=folder.tfvars -out=terraform.tfplan
+          #terraform apply -auto-approve -input=false terraform.tfplan
+          #terraform destroy -auto-approve 
+
+  apply: 
+     runs-on: ubuntu-latest
+     needs: plan
+     #if: |
+        #  github.ref == 'refs/heads/main'
+
+     steps:
+    # checkout repository to github action runner
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - id: auth
+        uses: google-github-actions/auth@v0.4.0 
+        with:
+          workload_identity_provider: 'projects/908852839842/locations/global/workloadIdentityPools/roka-poc-github/providers/roka-access-quest'
+          service_account: 'inf-sa@seed-440521.iam.gserviceaccount.com'
+
+
+      # Terraform Apply
+      - name: Terraform Apply
+        #if: |
+          #github.ref == 'refs/heads/main'
+        run: |
+          terraform apply -auto-approve -input=false
