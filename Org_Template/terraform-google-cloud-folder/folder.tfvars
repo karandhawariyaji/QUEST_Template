@@ -69,13 +69,13 @@ Level_3_boot_BU_Folders = {
 #********************************** North America **************************************# 
 
 Level_3_us_BU_Folders = {  
-  "gcp-shrd-infra-us-poc" = {
+  "gcp-shrd-infra-us-quest" = {
     delete = false,
     tags  = {},
     deletion_protection = false
     
   },
-  "gcp-dev-us-poc" = {
+  "gcp-dev-us-quest" = {
     delete = false,
     tags  = {},
     deletion_protection = false
@@ -104,12 +104,12 @@ Level_3_us_BU_Folders = {
 #********************************** North America Dev Folders **************************************# 
 
 Level_4_us_dev_BU_Folders = {
-  "gcp-d-02e" = {
+  "gcp-d-shrd-serv-us-quest" = {
     delete = false,
     tags  = {},
     deletion_protection = false 
   },
-  "gcp-d-buapp-0q1" = {
+  "gcp-d-buapp-shrd-serv-us-quest" = {
     delete = false,
     tags  = {},
     deletion_protection = false 
