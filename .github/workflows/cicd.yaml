@@ -81,7 +81,7 @@ jobs:
           cd Org_Template/terraform-google-cloud-org-policy
           terraform init -reconfigure
           #terraform plan --var-file=folder.tfvars
-          terraform plan --var-file=folder.tfvars -out=terraform.tfplan
+          terraform plan --var-file=orgpolicy.tfvars -out=terraform.tfplan
           terraform apply -auto-approve -input=false terraform.tfplan
           terraform destroy -auto-approve 
 
