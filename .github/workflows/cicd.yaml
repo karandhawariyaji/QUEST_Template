@@ -34,8 +34,11 @@ jobs:
      # Terraform Init
     - name: Terraform Init
       run: |
-        cd Org_Template/terraform-google-cloud-folder
-        terraform init --reconfigure
+         cd Org_Template/terraform-google-cloud-folder
+         terraform init --reconfigure \
+          -backend-config="bucket=kd-project-quest-001" \
+          -backend-config="prefix=org_module"" \
+          -backend-config="project=kd-project-437712"
         #terraform init  -var="git_token=${{ secrets.token }}"
 
   validate: 
