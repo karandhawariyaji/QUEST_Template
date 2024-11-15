@@ -29,7 +29,7 @@ jobs:
       run: |
           echo "*****replacing placeholders******"
           sed -i "s|\[PASSWORD\]|${{ secrets.TOKEN }}|g" *.tf
-      working-directory: ${{ env.WORKING_DIRECTORY }}
+          cd Org_Template/terraform-google-cloud-artifact-registry
 
      # Terraform Init
     - name: Terraform Init
