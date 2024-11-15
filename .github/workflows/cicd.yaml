@@ -5,7 +5,7 @@ on:
     branches: [ "registry" ]
 
   #workflow_dispatch:
-  #pull_request:
+  pull_request:
 
 permissions:
   contents: read
