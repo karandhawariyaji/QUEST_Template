@@ -1,6 +1,6 @@
 module "registry" {
     for_each = {
-      for k, v in try(var.registry,{}): k => v if v.delete != true 
+      for k, v in try(var.registry,{}): k => v if v.delete != true  
     }
     source = "git::https://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@github.com/KarandhawariyaJI/QUEST_Module.git//Org_Module//terraform-google-cloud-artifact-registry?ref=v1.0.0"
     project                       = each.key
