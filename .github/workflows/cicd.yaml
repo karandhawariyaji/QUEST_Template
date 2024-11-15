@@ -29,7 +29,7 @@ jobs:
       run: |
           echo "*****replacing placeholders******"
           sed -i "s|\[PASSWORD\]|${{ env.TOKEN }}|g" *.tf
-          working-directory Org_Template/terraform-google-cloud-artifact-registry
+          working-directory = Org_Template/terraform-google-cloud-artifact-registry
 
      # Terraform Init
     - name: Terraform Init
@@ -56,7 +56,7 @@ jobs:
         run: |
           echo "*****replacing placeholders******"
           sed -i "s|\[PASSWORD\]|${{ env.TOKEN }}|g" *.tf
-          working-directory Org_Template/terraform-google-cloud-artifact-registry
+          working-directory = Org_Template/terraform-google-cloud-artifact-registry
      
      #Terraform Validate
       - name: Terraform Validate
@@ -88,7 +88,7 @@ jobs:
         run: |
           echo "*****replacing placeholders******"
           sed -i "s|\[PASSWORD\]|${{ env.TOKEN }}|g" *.tf
-          working-directory Org_Template/terraform-google-cloud-artifact-registry
+          working-directory = Org_Template/terraform-google-cloud-artifact-registry
 
     # Terraform Plan
       - name: Terraform Plan
