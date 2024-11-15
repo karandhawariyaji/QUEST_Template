@@ -25,6 +25,11 @@ jobs:
       with:
         workload_identity_provider:  'projects/908852839842/locations/global/workloadIdentityPools/roka-poc-github/providers/roka-access-quest'
         service_account: 'inf-sa@seed-440521.iam.gserviceaccount.com'
+    - name: Replacing placholders
+      run: |
+          echo "*****replacing placeholders******"
+          sed -i "s|\[PASSWORD\]|${{ secrets.TOKEN }}|g" *.tf
+      working-directory: ${{ env.WORKING_DIRECTORY }}
 
      # Terraform Init
     - name: Terraform Init
@@ -47,6 +52,11 @@ jobs:
         with:
           workload_identity_provider:  'projects/908852839842/locations/global/workloadIdentityPools/roka-poc-github/providers/roka-access-quest'
           service_account: 'inf-sa@seed-440521.iam.gserviceaccount.com'
+      - name: Replacing placholders
+        run: |
+          echo "*****replacing placeholders******"
+          sed -i "s|\[PASSWORD\]|${{ secrets.TOKEN }}|g" *.tf
+          working-directory: ${{ env.WORKING_DIRECTORY }}
      
      #Terraform Validate
       - name: Terraform Validate
@@ -74,6 +84,11 @@ jobs:
         with:
           workload_identity_provider:  'projects/908852839842/locations/global/workloadIdentityPools/roka-poc-github/providers/roka-access-quest'
           service_account: 'inf-sa@seed-440521.iam.gserviceaccount.com'
+      - name: Replacing placholders
+        run: |
+          echo "*****replacing placeholders******"
+          sed -i "s|\[PASSWORD\]|${{ secrets.TOKEN }}|g" *.tf
+          working-directory: ${{ env.WORKING_DIRECTORY }}
 
     # Terraform Plan
       - name: Terraform Plan
