@@ -11,6 +11,9 @@ on:
 jobs:
   tf-destroy:
     runs-on: ubuntu-latest
+    permissions:
+     contents: read
+     id-token: 'write'
 
 
     steps:
@@ -19,8 +22,8 @@ jobs:
       - id: auth
         uses: google-github-actions/auth@v0.4.0  
         with:
-           workload_identity_provider: ${{ secrets.WORKLOAD_IDENTITY_PROVIDER }}
-           service_account: ${{ secrets.SERVICE_ACCOUNT_EMAIL }}
+          workload_identity_provider: 'projects/908852839842/locations/global/workloadIdentityPools/roka-poc-github/providers/roka-access-quest'
+          service_account: 'inf-sa@seed-440521.iam.gserviceaccount.com'
 
       - name: Terraform Init
         run: |
